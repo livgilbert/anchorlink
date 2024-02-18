@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "anchorlink",
+  "version": "0.1",
+
+  "description": "Easily make a link to anchorable elements on a page.",
+
+  "permissions": ["clipboardWrite", "contextMenus", "activeTab"],
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["anchorlink.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
+
